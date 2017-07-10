@@ -1,2 +1,16 @@
+<md-sidenav-container class="example-container">
+    <md-sidenav #sidenav class="example-sidenav">
+        Jolly good!
+    </md-sidenav>
 
-<router-outlet> </router-outlet>
+    <div class="example-sidenav-content">
+
+        <md-toolbar color="primary">
+            <a (click)="sidenav.open()"  md-button routerlink ><span><img src="../../assets/Logomakr_3TZOtB.png"> </span></a>
+  
+        </md-toolbar>
+
+        <router-outlet> </router-outlet>
+    </div>
+
+</md-sidenav-container>

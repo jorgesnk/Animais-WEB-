@@ -1,0 +1,28 @@
+.example-card {
+  width: 600px;
+  height: 700px;
+  background-color: #F5F5F5;
+  margin: 50px auto;
+
+  
+}
+
+.example-header-image {
+  background-size: cover;
+  
+
+}
+
+
+.filter{
+      background-color: #F5F5F5;
+      margin: 30px auto;
+      height: 100px;
+      width: 80%;
+}
+
+.span{
+    font-size: 25px;
+    color: #673ab7;
+}   
+
