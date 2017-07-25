@@ -1,44 +1,4 @@
-<md-card class="filter">
-    <md-card-content>
-        <span>Busca</span>
+<app-menu>
+</app-menu>
 
-        <md-select placeholder="Estado">
-            <md-option *ngFor="let estado of estados" [value]="estado">
-                {{ estado }}
-            </md-option>
-        </md-select>
-        <md-select placeholder="Cidade">
-            <md-option *ngFor="let estado of estados" [value]="estado">
-                {{ estado }}
-            </md-option>
-        </md-select>
-
-        <md-select placeholder="Especie">
-            <md-option *ngFor="let estado of estados" [value]="estado">
-                {{ estado }}
-            </md-option>
-        </md-select>
-
-    </md-card-content>
-
-
-
-</md-card>
-
-
-<main>
-    <md-card class="example-card" *ngFor="let animal of animais">
-        <md-card-header>
-            <img md-card-avatar class="example-header-image" src="{{animal.proprietario.foto}}" />
-
-            <md-card-title>{{animal.proprietario.nome}}</md-card-title>
-        </md-card-header>
-
-        <img md-card-image src="{{animal.image}}">
-
-        <md-card-content>
-            <span class="span"> Nome:{{animal.nome}} </span>
-        </md-card-content>
-
-    </md-card>
-</main>
+<app-card [animais]="animais"></app-card>

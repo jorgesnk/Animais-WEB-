@@ -1,0 +1,30 @@
+.example-card {
+  width: 70%;
+  height: 100%;  
+  display: block;
+  margin: 15px auto;
+  
+}
+
+
+.example-header-image {
+  
+  background-size: cover;
+  
+}
+
+.menu{
+  
+  background-color:#FFFAF0;
+  width:50%;
+  height:75%;
+  min-width: 200px;
+  overflow:scroll;  
+  position: fixed;
+  overflow-x: hidden;
+  margin-left: 25%;
+  
+  
+  
+}
+
