@@ -21,6 +21,7 @@
   min-width: 200px;
   overflow:scroll;  
   position: fixed;
+  
   overflow-x: hidden;
   margin-left: 25%;
   

@@ -1,3 +1,4 @@
+import { UserService } from './service/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -20,6 +21,9 @@ import { AnimalService } from './service/animal.service';
 import { MenuComponent } from './menu/menu.component';
 import { BuscaComponent } from './busca/busca.component';
 import { CardComponent } from './card/card.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import {Ng2ImgMaxModule} from'ng2-img-max';
+
 
 @NgModule({
   declarations: [
@@ -32,10 +36,13 @@ import { CardComponent } from './card/card.component';
     BuscaComponent,
 
     CardComponent,
+
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    Ng2ImgMaxModule,
     routing,
     BrowserAnimationsModule,
     MdButtonModule,
@@ -49,7 +56,7 @@ import { CardComponent } from './card/card.component';
     MdGridListModule,
     MdListModule
   ],
-  providers: [HomeService, AnimalService,EnderecoService],
+  providers: [HomeService, AnimalService,EnderecoService,UserService],
   bootstrap: [AppComponent]
 })
 
