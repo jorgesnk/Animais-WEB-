@@ -23,6 +23,7 @@ import { BuscaComponent } from './busca/busca.component';
 import { CardComponent } from './card/card.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import {Ng2ImgMaxModule} from'ng2-img-max';
+import { CadastraAnimalComponent } from './cadastra-animal/cadastra-animal.component';
 
 
 @NgModule({
@@ -38,6 +39,8 @@ import {Ng2ImgMaxModule} from'ng2-img-max';
     CardComponent,
 
     CadastroComponent,
+
+    CadastraAnimalComponent,
   ],
   imports: [
     BrowserModule,

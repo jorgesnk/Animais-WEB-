@@ -8,6 +8,7 @@ import { Http, Response } from '@angular/http';
 export class AnimalService {
   private endpointFoto = constante.api + 'animal/foto/';
   private endpointAddres = constante.api + 'animal/address';
+  private endpointCreate = constante.api + "api/animal";
   constructor(private http: Http) { }
 
   getFoto(data) {
@@ -17,6 +18,11 @@ export class AnimalService {
   getAddres(data) {
 
     return this.http.patch(this.endpointAddres, data).map((res: Response) => res.json()).toPromise().then().catch();
+
+  }
+
+  create(data) {
+    return this.http.post(this.endpointCreate,data).map((res: Response) => res.json()).toPromise().then().catch();
 
   }
 

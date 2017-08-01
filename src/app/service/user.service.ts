@@ -10,7 +10,7 @@ export class UserService {
   constructor(private http:Http) { }
 
   Create(data) {
-    return this.http.get(this.endpointCreate , data).map((res: Response) => res.json()).toPromise().then().catch();
+    return this.http.post(this.endpointCreate , data).map((res: Response) => res.json()).toPromise().then().catch();
   }
 
 }

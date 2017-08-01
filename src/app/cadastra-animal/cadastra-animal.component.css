@@ -9,8 +9,8 @@
 
 
 md-card{
-    width: 50%;    
-    height: 50%;
+    width: 25%;    
+    height: 25%;
     min-height: 500px;
     min-width: 250px;
     margin: 2% auto;
@@ -53,9 +53,17 @@ h1{
 }
 
 .img{
-    margin: 5% auto ;
-    max-width: 75%;
-    max-height: 75%;
+    display: block;
     
+    max-width: 25%;
+    max-height: 25%;
+    
+}
+
+h3{
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #673ab7;  
 }
 

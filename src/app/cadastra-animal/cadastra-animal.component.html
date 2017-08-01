@@ -1,0 +1,61 @@
+<app-menu>
+
+<md-card>
+  <h1 class="h1">Cadastro</h1>
+  <div class="example-form">
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <md-input-container class="example-full-width">
+            <input  [(ngModel)]="animal.nome" mdInput placeholder="Nome">
+          </md-input-container>
+        </td>
+      </tr>
+    </table>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <md-select placeholder="Tipo" [(ngModel)]="selecTipo"  >
+            <md-option *ngFor="let tipo of tipos" [value]="tipo">
+              {{ tipo }}
+            </md-option>
+          </md-select>
+        </td>
+      </tr>
+    </table>
+    
+
+    <div class="column">
+      <a (click)="clicar()">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <path d="M24 24H0V0h24v24z" id="a" />
+          </defs>
+          <clipPath id="b">
+            <use overflow="visible" xlink:href="#a" />
+          </clipPath>
+          <path clip-path="url(#b)" d="M3 4V1h2v3h3v2H5v3H3V6H0V4h3zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10h3zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-3.2-5c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2-1.43-3.2-3.2-3.2-3.2 1.43-3.2 3.2z"
+          />
+        </svg>
+        Adicionar Foto
+      </a>
+    </div>
+    <table class="example-full-width" cellspacing="0">
+      <tr *ngFor="let foto of animal.fotos let i= index">
+        <td class="img">
+          <h3 *ngIf="i==0">perfil</h3>
+          <img *ngIf="foto" src="{{foto}}" />
+           <button  md-raised-button color="primary" (click)="removeFoto(i)" >remover</button> 
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <button (click)="save()" class="cadastro" md-raised-button color="primary">Cadastrar</button>
+</md-card>
+<input id="arquivo" md-raised-button color="primary" type="file" (change)="handleFileSelect($event)" />
+
+</app-menu>
+
