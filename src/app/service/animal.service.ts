@@ -8,7 +8,7 @@ import { Http, Response } from '@angular/http';
 export class AnimalService {
   private endpointFoto = constante.api + 'animal/foto/';
   private endpointAddres = constante.api + 'animal/address';
-  private endpointCreate = constante.api + "api/animal";
+  private endpointCreate = constante.api + "animal";
   constructor(private http: Http) { }
 
   getFoto(data) {

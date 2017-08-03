@@ -24,6 +24,7 @@ import { CardComponent } from './card/card.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import {Ng2ImgMaxModule} from'ng2-img-max';
 import { CadastraAnimalComponent } from './cadastra-animal/cadastra-animal.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -41,6 +42,8 @@ import { CadastraAnimalComponent } from './cadastra-animal/cadastra-animal.compo
     CadastroComponent,
 
     CadastraAnimalComponent,
+
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

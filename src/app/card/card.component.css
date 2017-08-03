@@ -17,13 +17,10 @@
   
   background-color:#FFFAF0;
   width:50%;
-  height:75%;
-  min-width: 200px;
-  overflow:scroll;  
-  position: fixed;
-  
+  height:50%;
+  min-width: 200px;  
   overflow-x: hidden;
-  margin-left: 25%;
+  margin: 5% auto;
   
   
   

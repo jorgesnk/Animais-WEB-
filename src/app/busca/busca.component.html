@@ -1,29 +1,27 @@
 <app-menu>
+
+
+  <md-card class="menuLista">
+    <md-select placeholder="Estado" [(ngModel)]="selecEstado" name="food" (ngModelChange)="findCidade()">
+      <md-option *ngFor="let estado of estados" [value]="estado.sigla">
+        {{ estado.sigla }}
+      </md-option>
+    </md-select>
+
+    <md-select placeholder="Cidade" [(ngModel)]="selectCidade">
+      <md-option *ngFor="let data of cidades" [value]="data">
+        {{ data }}
+      </md-option>
+    </md-select>
+
+    <md-select placeholder="Tipo" [(ngModel)]="selectTipo">
+      <md-option *ngFor="let data of tipo" [value]="data">
+        {{ data }}
+      </md-option>
+    </md-select>
+    <button (click)="buscar()" md-raised-button color="primary">Buscar</button>
+  </md-card>
+
+  <app-card *ngIf="animais" [animais]="animais"></app-card>
+<app-footer></app-footer>
 </app-menu>
-
-<md-card class="menuLista">
-  <md-select placeholder="Estado" [(ngModel)]="selecEstado" name="food" (ngModelChange)="findCidade()">
-    <md-option *ngFor="let estado of estados" [value]="estado.sigla">
-      {{ estado.sigla }}
-    </md-option>
-  </md-select>
-
-  <md-select placeholder="Cidade" [(ngModel)]="selectCidade">
-    <md-option *ngFor="let data of cidades" [value]="data">
-      {{ data }}
-    </md-option>
-  </md-select>
-
-  <md-select placeholder="Tipo" [(ngModel)]="selectTipo">
-    <md-option *ngFor="let data of tipo" [value]="data">
-      {{ data }}
-    </md-option>
-  </md-select>
-  <button (click)="buscar()" md-raised-button color="primary">Buscar</button>
-</md-card>
-
-
- <app-card *ngIf="animais" [animais]="animais"></app-card> 
-
-
-

@@ -1,122 +1,126 @@
-<md-card>
-  <h1 class="h1">Cadastro</h1>
-  <div class="example-form">
+<app-menu>
 
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <md-input-container class="example-full-width">
-            <input  [(ngModel)]="user.nome" mdInput placeholder="Nome">
-          </md-input-container>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <md-input-container class="example-full-width">
-            <input [(ngModel)]="user.email" mdInput placeholder="E-Mail">
-          </md-input-container>
-        </td>
-      </tr>
-    </table>
+  <md-card>
+    <h1 class="h1">Cadastro</h1>
+    <div class="example-form">
 
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <md-input-container class="example-full-width">
-            <input [(ngModel)]="user.password" mdInput placeholder="Senha">
-          </md-input-container>
-        </td>
-        <td>
-          <md-input-container class="example-full-width">
-            <input [(ngModel)]="corfima" mdInput placeholder="Confirmar Senha">
-          </md-input-container>
-        </td>
-      </tr>
-    </table>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-input-container class="example-full-width">
+              <input [(ngModel)]="user.nome" mdInput placeholder="Nome">
+            </md-input-container>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <md-input-container class="example-full-width">
+              <input [(ngModel)]="user.email" mdInput placeholder="E-Mail">
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
 
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <md-input-container class="example-full-width">
-            <input [(ngModel)]="user.endereco.cep" mdInput placeholder="CEP">
-          </md-input-container>
-        </td>
-        <td>
-          <button (click)="buscaCep()" md-raised-button color="primary">Buscar</button>
-        </td>
-      </tr>
-    </table>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-input-container class="example-full-width">
+              <input [(ngModel)]="user.password" mdInput placeholder="Senha">
+            </md-input-container>
+          </td>
+          <td>
+            <md-input-container class="example-full-width">
+              <input [(ngModel)]="corfima" mdInput placeholder="Confirmar Senha">
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
 
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <md-select placeholder="Estado" [(ngModel)]="selecEstado"  (ngModelChange)="findCidade()">
-            <md-option *ngFor="let estado of estados" [value]="estado.sigla">
-              {{ estado.sigla }}
-            </md-option>
-          </md-select>
-        </td>
-        <td>
-          <md-select placeholder="Cidade" [(ngModel)]="selectCidade">
-            <md-option *ngFor="let data of cidades" [value]="data">
-              {{ data }}
-            </md-option>
-          </md-select>
-        </td>
-      </tr>
-    </table>
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <md-input-container class="example-full-width">
-            <input [(ngModel)]="user.endereco.logadouro" mdInput placeholder="Rua">
-          </md-input-container>
-        </td>
-      </tr>
-    </table>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-input-container class="example-full-width">
+              <input [(ngModel)]="user.endereco.cep" mdInput placeholder="CEP">
+            </md-input-container>
+          </td>
+          <td>
+            <button (click)="buscaCep()" md-raised-button color="primary">Buscar</button>
+          </td>
+        </tr>
+      </table>
 
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <md-input-container class="example-full-width">
-            <input [(ngModel)]="user.endereco.bairro" mdInput placeholder="Bairro">
-          </md-input-container>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <md-input-container class="example-full-width">
-            <input mdInput placeholder="Complemento">
-          </md-input-container>
-        </td>
-      </tr>
-    </table>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-select placeholder="Estado" [(ngModel)]="user.endereco.estado" (ngModelChange)="findCidade()">
+              <md-option *ngFor="let estado of estados" [value]="estado.sigla">
+                {{ estado.sigla }}
+              </md-option>
+            </md-select>
+          </td>
+          <td>
+            <md-select placeholder="Cidade" [(ngModel)]="user.endereco.cidade">
+              <md-option *ngFor="let data of cidades" [value]="data">
+                {{ data }}
+              </md-option>
+            </md-select>
+          </td>
+        </tr>
+      </table>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-input-container class="example-full-width">
+              <input [(ngModel)]="user.endereco.logadouro" mdInput placeholder="Rua">
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
 
-    <div class="column">
-      <a (click)="clicar()">
-        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <path d="M24 24H0V0h24v24z" id="a" />
-          </defs>
-          <clipPath id="b">
-            <use overflow="visible" xlink:href="#a" />
-          </clipPath>
-          <path clip-path="url(#b)" d="M3 4V1h2v3h3v2H5v3H3V6H0V4h3zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10h3zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-3.2-5c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2-1.43-3.2-3.2-3.2-3.2 1.43-3.2 3.2z"
-          />
-        </svg>
-        Adicionar Foto
-      </a>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-input-container class="example-full-width">
+              <input [(ngModel)]="user.endereco.bairro" mdInput placeholder="Bairro">
+            </md-input-container>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <md-input-container class="example-full-width">
+              <input mdInput placeholder="Complemento">
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
+
+      <div class="column">
+        <a (click)="clicar()">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <path d="M24 24H0V0h24v24z" id="a" />
+            </defs>
+            <clipPath id="b">
+              <use overflow="visible" xlink:href="#a" />
+            </clipPath>
+            <path clip-path="url(#b)" d="M3 4V1h2v3h3v2H5v3H3V6H0V4h3zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10h3zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-3.2-5c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2-1.43-3.2-3.2-3.2-3.2 1.43-3.2 3.2z"
+            />
+          </svg>
+          Adicionar Foto
+        </a>
+      </div>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td class="img">
+            <img *ngIf="user.foto" src="{{user.foto}}" />
+            <img *ngIf="!user.foto" src="{{foto}}">
+          </td>
+        </tr>
+      </table>
     </div>
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td class="img">
-          <img *ngIf="user.foto" src="{{user.foto}}" />
-          <img *ngIf="!user.foto" src="{{foto}}">
-        </td>
-      </tr>
-    </table>
-  </div>
 
-  <button (click)="saveUser()" class="cadastro" md-raised-button color="primary">Cadastrar</button>
-</md-card>
-<input id="arquivo" md-raised-button color="primary" type="file" (change)="handleFileSelect($event)" />
+    <button (click)="saveUser()" class="cadastro" md-raised-button color="primary">Cadastrar</button>
+  </md-card>
+  <input id="arquivo" md-raised-button color="primary" type="file" (change)="handleFileSelect($event)" />
+<app-footer></app-footer>
+</app-menu>

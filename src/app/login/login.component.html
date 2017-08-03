@@ -7,12 +7,12 @@
 
   <md-card-content>
    <md-input-container class="example-full-width">
-      <input mdInput placeholder="E-mail">
+      <input [(ngModel)]="user.email" mdInput placeholder="E-mail">
     </md-input-container>
     <md-input-container class="example-full-width">
-      <input  type="password" mdInput placeholder="Senha">
+      <input [(ngModel)]="user.password" type="password" mdInput placeholder="Senha">
     </md-input-container>
-      <button md-raised-button color="primary" class="botao" >Entrar</button>
+      <button md-raised-button color="primary" (click)="entrar()" class="botao" >Entrar</button>
   </md-card-content>
 
     

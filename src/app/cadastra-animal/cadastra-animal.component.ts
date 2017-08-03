@@ -1,3 +1,4 @@
+import { AnimalService } from './../service/animal.service';
 import { Ng2ImgMaxService } from 'ng2-img-max';
 import { Component, OnInit } from '@angular/core';
 
@@ -18,7 +19,7 @@ export class CadastraAnimalComponent implements OnInit {
   tipos = ['cachorro', 'gato'];
   selecTipo = "";
 
-  constructor(private ng2ImgMaxService:Ng2ImgMaxService) { }
+  constructor(private animalService:AnimalService,private ng2ImgMaxService:Ng2ImgMaxService) { }
 
   ngOnInit() {
   }
@@ -57,7 +58,7 @@ export class CadastraAnimalComponent implements OnInit {
       alert('Numero maximo de Fotos Exedido')
       return;
     }
-    this.animal.fotos[enumerter] = 'data:image/jpeg;base64,' + btoa(binaryString);
+    this.animal.fotos[enumerter] ={foto:'data:image/jpeg;base64,' + btoa(binaryString)} ;
   }
 
   removeFoto(i){
@@ -67,7 +68,11 @@ export class CadastraAnimalComponent implements OnInit {
   }
 
   save(){
-
+    this.animal.prprietario= JSON.parse(window.localStorage.getItem('user'))._id;
+    this.animal.tipo=this.selecTipo;
+    this .animalService.create(this.animal).then(data=>{
+      console.log(data);
+    })
   }
 
 }
