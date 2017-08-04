@@ -43,7 +43,7 @@ export class CadastroComponent implements OnInit {
   }
 
   findCidade() {
-    this.enderecoService.getCidade(this.user.endereco.cidade).then(data => {
+    this.enderecoService.getCidade(this.user.endereco.estado).then(data => {
 
       this.cidades = data.cidades;
     })

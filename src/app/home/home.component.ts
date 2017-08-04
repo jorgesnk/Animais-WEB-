@@ -26,10 +26,12 @@ ngOnInit() {
     ; this.animais.forEach(element => {
       this.animalService.getFoto(element.fotos[0]._id).then(foto => {
         element.image = foto[0].fotos[0].foto;
-      })
+        console.log(foto)
+      })  
     });
+    console.log(this.animais);
   })
-
+  
 }
 
 }

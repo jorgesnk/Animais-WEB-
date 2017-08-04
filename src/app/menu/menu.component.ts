@@ -18,8 +18,8 @@ export class MenuComponent implements OnInit {
   }
 
 
-  gotoCadastro(){
-    this.router.navigate(['busca']);
+  goTo(data){
+    this.router.navigate([data]);
   }
 
   

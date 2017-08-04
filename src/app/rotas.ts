@@ -13,6 +13,6 @@ export const routing = RouterModule.forRoot([
     {path:'home',component:HomeComponent},
     {path:'cadastro',component:CadastroComponent},
     {path:'busca',component:BuscaComponent},
-    { path: '**', component: BuscaComponent },
+    { path: '**', component: HomeComponent },
 
 ]);

@@ -11,7 +11,7 @@ export class CadastraAnimalComponent implements OnInit {
 
   animal = {
     nome: "",
-    prprietario: '',
+    proprietario:'',
     fotos: [],
     tipo: "",
   }
@@ -68,7 +68,7 @@ export class CadastraAnimalComponent implements OnInit {
   }
 
   save(){
-    this.animal.prprietario= JSON.parse(window.localStorage.getItem('user'))._id;
+    this.animal.proprietario= JSON.parse(window.localStorage.getItem('user'))._id;
     this.animal.tipo=this.selecTipo;
     this .animalService.create(this.animal).then(data=>{
       console.log(data);
