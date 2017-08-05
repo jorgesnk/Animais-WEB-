@@ -10,9 +10,15 @@
 .example-header-image {
   
   background-size: cover;
-  
+ 
 }
 
+
+.foto{
+  height: 50%;
+  width: 50%;
+  cursor: pointer;
+}
 .menu{
   
   background-color:#FFFAF0;

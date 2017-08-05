@@ -9,6 +9,7 @@ export class AnimalService {
   private endpointFoto = constante.api + 'animal/foto/';
   private endpointAddres = constante.api + 'animal/address';
   private endpointCreate = constante.api + "animal";
+  private endpointById = constante.api + "animal/";
   constructor(private http: Http) { }
 
   getFoto(data) {
@@ -22,8 +23,11 @@ export class AnimalService {
   }
 
   create(data) {
-    return this.http.post(this.endpointCreate,data).map((res: Response) => res.json()).toPromise().then().catch();
+    return this.http.post(this.endpointCreate, data).map((res: Response) => res.json()).toPromise().then().catch();
 
   }
 
+  getById(data) {
+    return this.http.get(this.endpointById+data).map((res: Response) => res.json()).toPromise().then().catch();
+  }
 }

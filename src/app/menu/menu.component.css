@@ -8,16 +8,26 @@
  
 }
 
-
-
-a{
+.example-icon {
+  margin-top: 0.9%;
+  padding:0 14px;
+}
   
+a{
   width: 100%;
+  cursor: pointer;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }
 
 
+
+
+
 .logo{
-    margin-top: 10px;
+    margin-top:7%;
     width: 200px;
     height:50px;
     cursor: pointer;
@@ -28,17 +38,18 @@ a{
 .example-container {
   width: 100%;
   height:auto;
+  overflow:hidden;
   position: relative; 
   background: #FFFAF0;
 
 }
 
 .example-sidenav-content {
-  /* display: flex; */
-  position: relative;
-  height: max-content;
-  /* align-items: center;
-  justify-content: center; */
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .example-sidenav {

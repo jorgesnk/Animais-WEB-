@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() animais:any;
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit() {
+  }
+
+  goTo(data){
+    this.router.navigate(['animal/'+data])
   }
 
 }

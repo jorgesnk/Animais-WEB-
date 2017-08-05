@@ -1,4 +1,3 @@
-import { EnderecoService } from './../service/endereco.service';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
 @Component({
@@ -10,11 +9,12 @@ import {Router} from '@angular/router'
 
 export class MenuComponent implements OnInit {
 
-  constructor(private router:Router,private enderecoService:EnderecoService) { }
+  constructor(private router:Router) { }
 
+  public user;
 
   ngOnInit() {
-    
+    this.user= JSON.parse(window.localStorage.getItem('user'));
   }
 
 

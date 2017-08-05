@@ -6,7 +6,7 @@
             <md-card-subtitle>Dog Breed</md-card-subtitle>
         </md-card-header>
 
-         <img md-card-image class="foto" src="{{animal.image}}"> 
+         <img (click)="goTo(animal._id)" md-card-image class="foto" src="{{animal.image}}"> 
 
         <md-card-content>
              <span class="span"> Nome:{{animal.nome}} </span> 

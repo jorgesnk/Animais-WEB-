@@ -1,6 +1,5 @@
 <app-menu>
 
-
   <md-card class="menuLista">
     <md-select placeholder="Estado" [(ngModel)]="selecEstado" name="food" (ngModelChange)="findCidade()">
       <md-option *ngFor="let estado of estados" [value]="estado.sigla">
@@ -23,5 +22,11 @@
   </md-card>
 
   <app-card *ngIf="animais" [animais]="animais"></app-card>
-<app-footer></app-footer>
+  <!--  -->
+<!--    -->
+  <!-- <div style="height: "> -->
+<!--  -->
+<!--  -->
+  <!-- </div> -->
+<!--  -->
 </app-menu>

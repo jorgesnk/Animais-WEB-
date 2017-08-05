@@ -1,3 +1,4 @@
+import { DetalhesAnimalComponent } from './detalhes-animal/detalhes-animal.component';
 import { CadastraAnimalComponent } from './cadastra-animal/cadastra-animal.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { BuscaComponent } from './busca/busca.component';
@@ -10,9 +11,11 @@ import {HomeComponent} from'./home/home.component';
 export const routing = RouterModule.forRoot([
     { path: 'login', component: LoginComponent },
     { path: 'cadastro/animal', component: CadastraAnimalComponent },
+    { path: 'animal/:id', component: DetalhesAnimalComponent },
     {path:'home',component:HomeComponent},
     {path:'cadastro',component:CadastroComponent},
     {path:'busca',component:BuscaComponent},
-    { path: '**', component: HomeComponent },
+    { path: '**', component: DetalhesAnimalComponent },
+    
 
 ]);

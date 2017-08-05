@@ -40,7 +40,7 @@ export class CadastraAnimalComponent implements OnInit {
       var reader = new FileReader();
 
       reader.onload = this._handleReaderLoaded.bind(this);
-      this.ng2ImgMaxService.resize([file], 250, 250).subscribe((result) => {
+      this.ng2ImgMaxService.resize([file], 500, 500).subscribe((result) => {
         reader.onload = this._handleReaderLoaded.bind(this);
 
         reader.readAsBinaryString(result);

@@ -9,7 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MdButtonModule, MdCardModule, MdToolbarModule,
   MdInputModule, MdInputContainer, MdSidenavModule,
-  MdSelectModule, MdOptionModule, MdGridListModule,MdListModule
+  MdSelectModule, MdOptionModule, MdGridListModule, MdListModule,
+  MdMenuModule,
 } from '@angular/material'
 
 import { AppComponent } from './app.component';
@@ -22,7 +23,7 @@ import { MenuComponent } from './menu/menu.component';
 import { BuscaComponent } from './busca/busca.component';
 import { CardComponent } from './card/card.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import {Ng2ImgMaxModule} from'ng2-img-max';
+import { Ng2ImgMaxModule } from 'ng2-img-max';
 import { CadastraAnimalComponent } from './cadastra-animal/cadastra-animal.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetalhesAnimalComponent } from './detalhes-animal/detalhes-animal.component';
@@ -63,9 +64,11 @@ import { DetalhesAnimalComponent } from './detalhes-animal/detalhes-animal.compo
     MdSelectModule,
     MdOptionModule,
     MdGridListModule,
-    MdListModule
+    MdListModule,
+    MdMenuModule
+    
   ],
-  providers: [HomeService, AnimalService,EnderecoService,UserService],
+  providers: [HomeService, AnimalService, EnderecoService, UserService],
   bootstrap: [AppComponent]
 })
 

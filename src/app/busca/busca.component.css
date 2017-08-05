@@ -3,14 +3,15 @@
 .menuLista{
     margin: 1% auto;
     height: 15%;
-    padding: 0.5%;
+    margin-top: 5%;
     width: 30%;
+    min-width: 200px;
 }
 
 md-select{
     margin-left: 1%;
     margin-right: 1%;
-    margin-top: 4%;
+    margin-bottom: 10%;
 }
 button{
     margin-top: 4%;
